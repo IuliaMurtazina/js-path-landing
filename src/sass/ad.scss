@@ -1,0 +1,35 @@
+.ad {
+  background-color: $gray-bg;
+
+  &__content {
+    padding: 3.4rem 8.4rem;
+
+    @include vert-flex;
+    gap: 1.6rem;
+
+    @media screen and (max-width: $tablet) {
+      padding: 3.4rem max(5%, 2rem);
+      gap: 1.4rem;
+    }
+  }
+
+  &__text {
+    color: $color-main-black;
+    font-family: Helvetica;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+
+  &__link {
+    color: $color-main-blue;
+    text-decoration: underline;
+  }
+
+  &__image {
+    width: 100%;
+    height: 20rem;
+    background-size: cover;
+    background-image: url('../img/books-2.jpg');
+    background-position: 80%;
+  }
+}

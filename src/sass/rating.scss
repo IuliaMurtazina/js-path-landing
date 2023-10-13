@@ -1,0 +1,57 @@
+.rating {
+  background-color: $gray-bg;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  &__content,
+  &__stars,
+  &__form {
+    @include vert-flex;
+  }
+
+  &__content {
+    gap: 3rem;
+  }
+
+  &__stars {
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  &__form {
+    gap: 1.5rem;
+  }
+
+}
+
+.stars {
+  @include flex-center;
+  flex-direction: row-reverse;
+  gap: 1rem;
+
+  &__input {
+    display: none;
+  }
+
+  &__label {
+    cursor: pointer;
+  }
+
+  &__label svg {
+    width: 2.5rem;
+    height: 2.3rem;
+    stroke: $color-gray-2;
+    fill: none;
+  }
+
+  &__input:checked~&__label svg {
+    fill: $color-main-yellow;
+    stroke: $color-main-yellow;
+  }
+
+  &__input:hover~&__label svg {
+    fill: $color-main-yellow;
+    stroke: $color-main-yellow;
+  }
+}
+

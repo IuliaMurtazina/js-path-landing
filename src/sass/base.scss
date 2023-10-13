@@ -1,0 +1,195 @@
+////////////////////////////////////////
+// Fonts
+@font-face {
+  font-family: 'ArialMT';
+  src: url('../fonts/ArialMT.eot');
+  src: local('ArialMT'), local('ArialMT'),
+    url('../fonts/ArialMT.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Consolas';
+  src: url('../fonts/Consolas.eot');
+  src: local('Consolas Regular'), local('Consolas-Regular'),
+    url('../fonts/Consolas.woff') format('woff'),
+    url('../fonts/Consolas.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Consolas';
+  src: url('../fonts/Consolas-Bold.eot');
+  src: local('Consolas Bold'), local('Consolas-Bold'),
+    url('../fonts/Consolas-Bold.woff') format('woff'),
+    url('../fonts/Consolas.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+////////////////////////////////////////
+// MEDIA QUERY MANAGER
+
+$desc-small: 1024px;
+$tablet: 768px;
+$phone-big: 480px;
+$phone-small: 375px;
+
+////////////////////////////////////////
+// Variables
+
+$color-main-black: #000;
+$color-main-white: #fff;
+$color-main-blue: #0062FF;
+$color-main-yellow: #FFB400;
+
+$color-gray-light-1: #DBDBDB;
+$color-gray-light-2: #E6E6E6;
+$gray-bg: #EDEDED;
+
+$color-gray-dark-1: #202326;
+$color-gray-dark-2: #1A1A1A;
+$color-gray-dark-3: #272522;
+
+$color-gray: #777;
+$color-gray-2: #979797;
+$color-gray-3: #7F7F7F;
+
+$font-size-primary: 1.6rem;
+
+$content-width: 77.8rem;
+
+////////////////////////////////////////
+// Mixins
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin vert-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+
+////////////////////////////////////////
+// Root
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  font-size: $font-size-primary;
+  font-weight: 400;
+  background-color: $color-main-white;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+a,
+button {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+// .content-width {
+//   width: 71%;
+//   max-width: 120rem;
+//   margin: 0 auto;
+//   padding-right: 2rem;
+//   padding-left: 2rem;
+
+//   @media screen and (min-width: $desc-small) {
+//     min-width: $content-width;
+//   }
+
+//   @media screen and (max-width: $desc-small) {
+//     width: 100%;
+//     max-width: $content-width;
+//   }
+// }
+
+.content-width {
+  width: 100%;
+  max-width: $content-width;
+  margin: 0 auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.heading-1 {
+  font-size: 4.8rem;
+  color: $color-main-blue;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Consolas;
+  font-weight: 700;
+  line-height: 4.8rem;
+  width: 100%;
+  white-space: nowrap;
+
+  @media screen and (max-width: $tablet) {
+    font-size: 3rem;
+  }
+
+  @media screen and (max-width: $phone-big) {
+    font-size: 2.3rem;
+  }
+}
+
+.heading-2 {
+  color: $color-main-black;
+  font-family: Consolas;
+  font-size: 2.8rem;
+  font-weight: 400;
+  line-height: 3.6rem;
+
+  @media screen and (max-width: $tablet) {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  @media screen and (max-width: $phone-big) {
+    font-size: 2.1rem;
+  }
+}
+
+.heading-3,
+.heading-4 {
+  color: $color-gray-dark-1;
+  font-family: Consolas;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.8rem;
+}
+
+.heading-4 {
+  @media screen and (max-width: $tablet) {
+    font-size: 1.6rem;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+

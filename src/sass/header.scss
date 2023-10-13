@@ -1,0 +1,155 @@
+.header {
+  background-color: $color-main-white;
+
+  &__server {
+    @include vert-flex;
+    gap: 3rem;
+    padding-top: 5.5rem;
+    padding-bottom: 4.5rem;
+
+    @media screen and (max-width: $tablet) {
+      gap: 2rem;
+      padding-top: 1.4rem;
+      padding-bottom: 5.6rem;
+    }
+  }
+}
+
+.heading {
+  @include flex-center;
+  gap: 2.8rem;
+  padding-top: 8rem;
+  padding-bottom: 1.4rem;
+
+  @media screen and (max-width: $tablet) {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
+
+  @media screen and (max-width: $tablet) {
+    gap: 2.2rem;
+  }
+
+  @media screen and (max-width: $phone-big) {
+    gap: 1.5rem;
+  }
+
+  &__divider {
+    width: 100%;
+    height: 1px;
+    background-color: $color-gray-light-1;
+  }
+}
+
+.banner {
+  @include vert-flex;
+  gap: 2rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid #DCDCDC;
+
+  @media screen and (max-width: $tablet) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: none;
+  }
+
+  &__img-container {
+    @media screen and (max-width: $tablet) {
+      padding-bottom: 1rem;
+      overflow-x: scroll;
+    }
+
+    &::-webkit-scrollbar {
+      height: 10px;
+    }
+
+    &::-webkit-scrollbar-track,
+    &::-webkit-scrollbar-thumb {
+      border-radius: 50px;
+      border: 3px solid transparent;
+      background-clip: padding-box;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: $color-gray-light-2;
+    }
+
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-main-blue;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    min-width: 73.8rem;
+  }
+
+  &__description {
+    color: $color-gray-dark-1;
+    font-family: Arial;
+    font-size: 1.4rem;
+    font-style: italic;
+    line-height: 1.8rem;
+  }
+
+  @media screen and (max-width: $tablet) {
+    flex-direction: column-reverse;
+    gap: 2.6rem;
+  }
+}
+
+.quote {
+  @include vert-flex;
+  gap: 3.5rem;
+  padding-left: 7%;
+  align-self: flex-end;
+  position: relative;
+
+  &::before {
+    content: url('../img/quote.png');
+    position: absolute;
+    left: 0;
+    top: -1rem;
+  }
+
+  @media screen and (max-width: $tablet) {
+    gap: 2.5rem;
+    padding-left: 12%;
+  }
+
+  @media screen and (max-width: $phone-big) {
+    padding-left: 19%;
+  }
+
+  &__text,
+  &__author {
+    font-family: 'Open Sans';
+    font-style: italic;
+    line-height: 2.4rem;
+
+    @media screen and (max-width: $tablet) {
+      line-height: 2rem;
+    }
+  }
+
+  &__text {
+    color: $color-gray-dark-2;
+    font-size: 1.8rem;
+
+    @media screen and (max-width: $phone-big) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__author {
+    color: $color-gray;
+    font-size: 1.6rem;
+
+    @media screen and (max-width: $phone-big) {
+      font-size: 1.4rem;
+    }
+  }
+
+}

@@ -1,0 +1,47 @@
+.posts {
+  &__content {
+    padding-top: 6rem;
+    padding-bottom: 7.5rem;
+
+    @include vert-flex;
+    gap: 4rem;
+
+    @media screen and (max-width: $tablet) {
+      padding-top: 3.6rem;
+      padding-bottom: 6.6rem;
+      gap: 2rem;
+    }
+  }
+
+  &__container {
+    @media screen and (min-width: 769px) {
+      @include flex-center;
+      gap: 3rem;
+      justify-content: space-between;
+    }
+  }
+}
+
+.post {
+  @include vert-flex;
+  gap: 2rem;
+  align-items: center;
+  width: 100%;
+
+  @media screen and (max-width: $tablet) {
+    padding-bottom: 3.5rem;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 22.6rem;
+  }
+
+  &__description {
+    color: $color-gray-dark-3;
+    font-family: Consolas;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+  }
+}
